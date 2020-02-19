@@ -1,0 +1,14 @@
+%{
+//Defintion Section
+%}
+
+%%
+[0-9] {printf("This is a number",yytext);}
+.	{printf("This is not a number",yytext);}
+%%
+yywrap(){}
+int main(){
+yylex();
+return 0;
+}
+
