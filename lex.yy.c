@@ -295,16 +295,16 @@ static yyconst int yy_ec[256] =
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
-        1,    1,    1,    1,    1,    1,    1,    3,    3,    3,
-        3,    3,    3,    3,    3,    3,    3,    1,    1,    1,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
-        1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
-        1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
+        1,    1,    1,    1,    3,    3,    3,    3,    3,    3,
+        3,    3,    3,    3,    3,    3,    3,    3,    3,    3,
+        3,    3,    3,    3,    3,    3,    3,    3,    3,    3,
+        1,    1,    1,    1,    1,    1,    3,    3,    3,    3,
 
-        1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
-        1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
-        1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
+        3,    3,    3,    3,    3,    3,    3,    3,    3,    3,
+        3,    3,    3,    3,    3,    3,    3,    3,    3,    3,
+        3,    3,    1,    1,    1,    1,    1,    1,    1,    1,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
@@ -357,10 +357,10 @@ static char *yy_last_accepting_cpos;
 #define YY_MORE_ADJ 0
 #define YY_RESTORE_YY_MORE_OFFSET
 char *yytext;
-#line 1 "Checking_number.l"
+#line 1 "CheckingCharacter.l"
 #define INITIAL 0
-#line 2 "Checking_number.l"
-//Defintion Section
+#line 2 "CheckingCharacter.l"
+
 #line 365 "lex.yy.c"
 
 /* Macros after this point can all be overridden by user definitions in
@@ -512,7 +512,7 @@ YY_DECL
 	register char *yy_cp, *yy_bp;
 	register int yy_act;
 
-#line 5 "Checking_number.l"
+#line 5 "CheckingCharacter.l"
 
 #line 518 "lex.yy.c"
 
@@ -599,17 +599,17 @@ do_action:	/* This label is used only to access EOF actions. */
 
 case 1:
 YY_RULE_SETUP
-#line 6 "Checking_number.l"
-{printf("This is a number\n",yytext);}
+#line 6 "CheckingCharacter.l"
+{printf("%s this is a character\n",yytext);}
 	YY_BREAK
 case 2:
 YY_RULE_SETUP
-#line 7 "Checking_number.l"
-{printf("This is not a number\n",yytext);}
+#line 7 "CheckingCharacter.l"
+{printf("%s this is not a character\n",yytext);}
 	YY_BREAK
 case 3:
 YY_RULE_SETUP
-#line 8 "Checking_number.l"
+#line 8 "CheckingCharacter.l"
 ECHO;
 	YY_BREAK
 #line 616 "lex.yy.c"
@@ -1498,11 +1498,11 @@ int main()
 	return 0;
 	}
 #endif
-#line 8 "Checking_number.l"
+#line 8 "CheckingCharacter.l"
 
-yywrap(){}
-int main(){
+yywrap(){};
+int main()
+{
 yylex();
 return 0;
 }
-
